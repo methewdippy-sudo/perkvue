@@ -8,17 +8,17 @@ export default function Footer() {
         <div className={styles.brandCol}>
           <img src="/perkvue-logo.svg" alt="PerkVue Logo" className={styles.footerLogo} />
           <p className={styles.brandDesc}>
-            PerkVue is the trusted US portal for verified wellness discounts, premium supplement savings, and daily longevity perks.
+            PerkVue is an independent curation of verified retail perks, merchant discount codes, and member privileges.
           </p>
         </div>
 
         <div className={styles.linksCol}>
           <h5 className={styles.colTitle}>Popular Categories</h5>
           <ul className={styles.linkList}>
-            <li><a href="/deals/im8-health-us">Daily Longevity Drinks</a></li>
-            <li><a href="/#perks">Performance Nutrition</a></li>
-            <li><a href="/#perks">Cellular Recovery</a></li>
-            <li><a href="/#perks">Fitness Wearables</a></li>
+            <li><a href="/#brands">Online Marketplaces</a></li>
+            <li><a href="/#brands">Athletic & Sportswear</a></li>
+            <li><a href="/#brands">Beauty & Cosmetics</a></li>
+            <li><a href="/#brands">Electronics & Gadgets</a></li>
           </ul>
         </div>
 
@@ -26,16 +26,16 @@ export default function Footer() {
           <h5 className={styles.colTitle}>Verification Standards</h5>
           <ul className={styles.linkList}>
             <li>100% Tested Daily</li>
-            <li>Official Brand Partner Codes</li>
-            <li>No Expired Traps</li>
             <li>Direct Merchant Redirection</li>
+            <li>No Expired Clutter</li>
+            <li>Zero Account Required</li>
           </ul>
         </div>
       </div>
 
       <div className={styles.bottomBar}>
         <div className={styles.bottomContainer}>
-          <p>© {new Date().getFullYear()} PerkVue.com. All rights reserved. Third-party trademarks belong to their respective owners.</p>
+          <p>© {new Date().getFullYear()} PerkVue.com. All rights reserved. Trademarks belong to respective owners.</p>
           <div className={styles.legalLinks}>
             <a href="/privacy">Privacy Policy</a>
             <span>•</span>

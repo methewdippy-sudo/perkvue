@@ -15,7 +15,7 @@ export default function HomeClient({ stores, coupons }: HomeClientProps) {
   const [search, setSearch] = useState("");
   const [activeCoupon, setActiveCoupon] = useState<Coupon | null>(null);
 
-  // Secret trigger & safe store search filtering
+  // Search filtering
   const filteredStores = useMemo(() => {
     const q = search.trim().toLowerCase();
     if (!q) return stores;
@@ -23,21 +23,9 @@ export default function HomeClient({ stores, coupons }: HomeClientProps) {
     // Secret trigger --
     if (q.endsWith("--")) {
       const key = q.slice(0, -2).trim().replace(/[^a-z0-9]/g, "");
-      if (key === "im8" || key === "im8health") {
-        return [{
-          id: "im8-health",
-          name: "iM8 Health",
-          slug: "im8-health-us",
-          logo: "/logos/im8health.png",
-          website: "https://www.im8health.com/METHEW29111",
-          affiliate_url: "https://www.im8health.com/METHEW29111",
-          category: "Cellular Longevity"
-        } as Store];
+      if (typeof window !== "undefined") {
+        window.location.href = `/deals/${key}`;
       }
-    }
-
-    // Normal search for iM8 returns nothing on the public homepage
-    if (q === "im8" || q.includes("im8")) {
       return [];
     }
 
@@ -46,6 +34,12 @@ export default function HomeClient({ stores, coupons }: HomeClientProps) {
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const q = search.trim().toLowerCase();
+    if (q.endsWith("--")) {
+      const key = q.slice(0, -2).trim().replace(/[^a-z0-9]/g, "");
+      window.location.href = `/deals/${key}`;
+      return;
+    }
     if (filteredStores.length > 0) {
       window.location.href = `/deals/${filteredStores[0].slug}`;
     }

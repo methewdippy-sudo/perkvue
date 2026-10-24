@@ -13,16 +13,7 @@ export default function Header() {
 
     if (query.endsWith("--")) {
       const key = query.slice(0, -2).trim().replace(/[^a-z0-9]/g, "");
-      if (key === "im8" || key === "im8health") {
-        window.location.href = "/deals/im8-health-us";
-        return;
-      }
       window.location.href = `/deals/${key}`;
-      return;
-    }
-
-    if (query.includes("im8")) {
-      window.location.href = "/deals/im8-health-us";
       return;
     }
 
