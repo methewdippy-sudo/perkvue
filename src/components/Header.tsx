@@ -17,7 +17,7 @@ export default function Header() {
       return;
     }
 
-    window.location.href = `/?q=${encodeURIComponent(query)}`;
+    window.location.href = `/#directory`;
   };
 
   return (
@@ -30,13 +30,13 @@ export default function Header() {
 
         {/* Minimalist Search Bar */}
         <form onSubmit={handleSearchSubmit} className={styles.searchForm}>
-          <svg className={styles.searchIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg className={styles.searchIcon} width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
           <input
             type="text"
-            placeholder="Search verified brand perks..."
+            placeholder="Search verified partner privileges..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className={styles.searchInput}
@@ -45,8 +45,9 @@ export default function Header() {
 
         {/* Minimalist Navigation */}
         <nav className={styles.nav}>
-          <a href="/#brands" className={styles.navLink}>Featured Brands</a>
-          <a href="/#perks" className={styles.navLink}>Daily Vouchers</a>
+          <a href="/#directory" className={styles.navLink}>Partner Registry</a>
+          <a href="/#standards" className={styles.navLink}>Audit Standards</a>
+          <a href="/#standards" className={styles.navLink}>FAQ</a>
         </nav>
       </div>
     </header>

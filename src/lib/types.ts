@@ -9,6 +9,9 @@ export interface Store {
   category?: string;
   rating?: number;
   reviews_count?: number;
+  benefit?: string;
+  badge?: string;
+  highlight?: string;
 }
 
 export interface Coupon {

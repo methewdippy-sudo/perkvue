@@ -1,271 +1,806 @@
+/* ==========================================================================
+   PERKVUE STYLES - ULTRA MODERN EXECUTIVE PERKS & PRIVILEGES PORTAL
+   Zero resemblance to generic coupon directories. High-end luxury typography,
+   split-screen interactive hero, horizontal partner directory, and editorial standards.
+   ========================================================================== */
+
 .homeContainer {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 48px 24px 80px 24px;
+  padding: 40px 24px 80px 24px;
 }
 
-/* Minimalist Editorial Hero */
-.heroSection {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 64px auto;
+/* ==========================================
+   1. SPLIT-SCREEN EDITORIAL HERO
+   ========================================== */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  padding: 40px 0 64px 0;
+  border-bottom: 1px solid #e4e4e7;
+  margin-bottom: 56px;
+}
+
+.heroLeft {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.heroTag {
+.heroBadge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: #f4f4f5;
   color: #18181b;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
   padding: 6px 14px;
   border-radius: 9999px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   border: 1px solid #e4e4e7;
 }
 
-.dot {
-  width: 6px;
-  height: 6px;
-  background: #4f46e5;
+.pulseDot {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
   border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
 .heroTitle {
   font-size: 46px;
-  font-weight: 900;
+  font-weight: 850;
   color: #09090b;
-  line-height: 1.15;
-  letter-spacing: -1.2px;
-  margin-bottom: 18px;
+  line-height: 1.12;
+  letter-spacing: -1.4px;
+  margin: 0 0 20px 0;
 }
 
-.editorialText {
-  color: #4f46e5;
+.heroTitleHighlight {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heroSubtitle {
-  font-size: 16px;
-  color: #71717a;
+  font-size: 16.5px;
+  color: #52525b;
   line-height: 1.6;
-  margin-bottom: 32px;
-  max-width: 600px;
+  margin: 0 0 32px 0;
+  max-width: 580px;
 }
 
-/* Hero Search Form */
-.heroSearchForm {
-  width: 100%;
-  max-width: 560px;
-  position: relative;
+.heroActions {
   display: flex;
   align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #09090b;
+  color: #ffffff;
+  padding: 13px 26px;
+  border-radius: 12px;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.primaryCta:hover {
+  background: #27272a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+}
+
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
   background: #ffffff;
+  color: #18181b;
+  padding: 13px 22px;
+  border-radius: 12px;
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
   border: 1px solid #d4d4d8;
-  border-radius: 14px;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-  margin-bottom: 18px;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
-.heroSearchForm:focus-within {
-  border-color: #09090b;
-  box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.08);
+.secondaryCta:hover {
+  background: #f4f4f5;
+  border-color: #a1a1aa;
 }
 
-.searchIcon {
+/* Trust Metric Row */
+.trustMetricRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #f4f4f5;
+  width: 100%;
+}
+
+.trustMetric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricValue {
+  font-size: 17px;
+  font-weight: 800;
+  color: #09090b;
+  letter-spacing: -0.3px;
+}
+
+.metricLabel {
+  font-size: 12px;
+  color: #71717a;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.metricDivider {
+  width: 1px;
+  height: 28px;
+  background: #e4e4e7;
+}
+
+/* ==========================================
+   2. HERO RIGHT: INTERACTIVE MEMBER VAULT CARD
+   ========================================== */
+.heroRight {
+  position: relative;
+}
+
+.vaultCard {
+  background: linear-gradient(145deg, #18181b 0%, #09090b 100%);
+  border-radius: 20px;
+  padding: 30px;
+  color: #ffffff;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
+  border: 1px solid #27272a;
+  position: relative;
+  overflow: hidden;
+}
+
+.vaultCardGlow {
   position: absolute;
-  left: 18px;
-  color: #a1a1aa;
+  top: -50px;
+  right: -50px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, transparent 70%);
   pointer-events: none;
 }
 
-.heroInput {
-  width: 100%;
-  height: 52px;
-  background: transparent;
-  border: none;
-  padding: 0 110px 0 48px;
-  font-size: 15px;
-  color: #09090b;
-  outline: none;
-}
-
-.heroBtn {
-  position: absolute;
-  right: 6px;
-  height: 40px;
-  padding: 0 20px;
-  background: #09090b;
-  color: #ffffff;
-  font-size: 13.5px;
-  font-weight: 700;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.heroBtn:hover {
-  background: #27272a;
-}
-
-.pillsRow {
+.vaultCardTop {
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vaultCardBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chipIcon {
+  width: 24px;
+  height: 20px;
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  border-radius: 4px;
+  position: relative;
+}
+
+.vaultCardTitle {
   font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #e4e4e7;
 }
 
-.pillsLabel {
-  color: #a1a1aa;
-  font-weight: 600;
-}
-
-.pillBtn {
-  background: #ffffff;
-  color: #3f3f46;
-  border: 1px solid #e4e4e7;
-  padding: 5px 12px;
+.vaultStatusBadge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  padding: 4px 10px;
   border-radius: 9999px;
-  font-size: 12.5px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.vaultPreviewSelector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.vaultTab {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #a1a1aa;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
+  text-align: center;
 }
 
-.pillBtn:hover {
-  border-color: #a1a1aa;
+.vaultTab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.vaultTabActive {
+  background: #ffffff;
   color: #09090b;
+  border-color: #ffffff;
+  font-weight: 700;
 }
 
-/* Brands Section */
-.brandsSection {
-  margin-bottom: 64px;
+.vaultDisplayBox {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
 }
 
-.sectionHeader {
+.vaultDisplayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.vaultPartnerName {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.vaultTierTag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #818cf8;
+  background: rgba(99, 102, 241, 0.15);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.vaultBenefit {
+  font-size: 14px;
+  color: #d4d4d8;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+.vaultActionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vaultPassCode {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  color: #34d399;
+}
+
+.vaultCardLink {
+  color: #818cf8;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.vaultCardLink:hover {
+  color: #a5b4fc;
+}
+
+.vaultCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #71717a;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================
+   3. DIRECTORY TOOLBAR & FILTERS
+   ========================================== */
+.directorySection {
+  margin-bottom: 72px;
+}
+
+.directoryHeader {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 24px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #e4e4e7;
 }
 
-.sectionHeading {
-  font-size: 20px;
-  font-weight: 800;
+.directoryTitle {
+  font-size: 24px;
+  font-weight: 850;
   color: #09090b;
-  margin: 0 0 4px 0;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.6px;
+  margin: 0 0 6px 0;
 }
 
-.sectionSub {
-  font-size: 13.5px;
+.directorySubtitle {
+  font-size: 14px;
   color: #71717a;
   margin: 0;
 }
 
-.brandCountBadge {
-  font-size: 12px;
+.toolbarRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* Horizontal Category Filter Pills */
+.categoryPills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.categoryPill {
+  background: #f4f4f5;
+  color: #52525b;
+  border: 1px solid #e4e4e7;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.categoryPill:hover {
+  background: #e4e4e7;
+  color: #09090b;
+}
+
+.categoryPillActive {
+  background: #09090b;
+  color: #ffffff;
+  border-color: #09090b;
   font-weight: 700;
-  color: #4f46e5;
-  background: #eef2ff;
-  padding: 4px 10px;
-  border-radius: 6px;
 }
 
-.brandsGrid {
+/* Directory Search Box */
+.directorySearch {
+  position: relative;
+  min-width: 280px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a1a1aa;
+  pointer-events: none;
+}
+
+.directorySearchInput {
+  width: 100%;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #d4d4d8;
+  border-radius: 10px;
+  padding: 0 16px 0 40px;
+  font-size: 13.5px;
+  color: #09090b;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.directorySearchInput:focus {
+  border-color: #09090b;
+}
+
+/* ==========================================
+   4. HORIZONTAL EXECUTIVE PARTNER ROWS (NOT COUPON CARDS)
+   ========================================== */
+.directoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.partnerRow {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.brandCard {
+  grid-template-columns: 80px 1.2fr 1.6fr 150px 160px;
+  align-items: center;
+  gap: 20px;
   background: #ffffff;
   border: 1px solid #e4e4e7;
   border-radius: 14px;
-  padding: 20px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  padding: 16px 20px;
   text-decoration: none;
+  color: inherit;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
 }
 
-.brandCard:hover {
-  transform: translateY(-2px);
+.partnerRow:hover {
   border-color: #a1a1aa;
-  box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.04);
+  transform: translateY(-1.5px);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.05);
 }
 
-.brandLogoWrap {
-  width: 100%;
-  height: 52px;
+.partnerLogoWrap {
+  width: 64px;
+  height: 48px;
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
+  padding: 6px;
 }
 
-.brandLogo {
-  max-width: 110px;
-  max-height: 44px;
+.partnerLogo {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
 
-.brandMeta {
+.partnerMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.partnerNameWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.partnerName {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #09090b;
+  margin: 0;
+}
+
+.partnerTierBadge {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #4f46e5;
+  background: #eef2ff;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.partnerCategory {
+  font-size: 12px;
+  color: #71717a;
+}
+
+.partnerBenefit {
+  font-size: 13.5px;
+  color: #27272a;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.partnerAudit {
+  display: flex;
+  flex-direction: column;
+}
+
+.auditStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.auditDot {
+  width: 5px;
+  height: 5px;
+  background: #10b981;
+  border-radius: 50%;
+}
+
+.auditTimestamp {
+  font-size: 11px;
+  color: #a1a1aa;
+  margin-top: 2px;
+}
+
+.claimButtonWrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.claimButton {
+  background: #09090b;
+  color: #ffffff;
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.partnerRow:hover .claimButton {
+  background: #4f46e5;
+}
+
+/* Empty Search State */
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fbfbfb;
+  border: 1px dashed #d4d4d8;
+  border-radius: 16px;
+  color: #71717a;
+}
+
+/* ==========================================
+   5. EDITORIAL INTEGRITY STANDARDS (3 COLUMNS)
+   ========================================== */
+.standardsSection {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 48px 40px;
+  margin-bottom: 72px;
+}
+
+.standardsHeader {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.standardsTitle {
+  font-size: 26px;
+  font-weight: 850;
+  color: #0f172a;
+  letter-spacing: -0.6px;
+  margin: 0 0 10px 0;
+}
+
+.standardsSubtitle {
+  font-size: 14.5px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.standardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.standardCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.standardNumber {
+  font-size: 12px;
+  font-weight: 800;
+  color: #4f46e5;
+  letter-spacing: 1px;
   margin-bottom: 12px;
 }
 
-.brandName {
-  font-size: 14.5px;
+.standardHeading {
+  font-size: 16px;
   font-weight: 800;
-  color: #09090b;
-  margin: 0 0 2px 0;
+  color: #0f172a;
+  margin: 0 0 8px 0;
 }
 
-.brandCategory {
-  font-size: 11.5px;
-  color: #a1a1aa;
-  font-weight: 500;
+.standardDesc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
 }
 
-.viewLink {
-  font-size: 12px;
+/* ==========================================
+   6. EDITORIAL SPOTLIGHT BANNER
+   ========================================== */
+.spotlightBanner {
+  background: linear-gradient(135deg, #1e1b4b 0%, #09090b 100%);
+  border-radius: 20px;
+  padding: 48px 44px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 72px;
+  border: 1px solid #312e81;
+}
+
+.spotlightContent {
+  max-width: 680px;
+}
+
+.spotlightTag {
+  font-size: 11px;
   font-weight: 700;
-  color: #4f46e5;
-  opacity: 0.9;
-  transition: opacity 0.2s;
+  letter-spacing: 1.2px;
+  color: #a5b4fc;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
-.brandCard:hover .viewLink {
-  opacity: 1;
+.spotlightHeading {
+  font-size: 26px;
+  font-weight: 850;
+  letter-spacing: -0.5px;
+  margin: 0 0 12px 0;
+  line-height: 1.25;
 }
 
-/* Coupons Grid */
-.couponsSection {
-  margin-bottom: 40px;
+.spotlightText {
+  font-size: 14.5px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0;
 }
 
-.couponsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+.spotlightAction {
+  white-space: nowrap;
 }
 
+.spotlightBtn {
+  display: inline-block;
+  background: #ffffff;
+  color: #09090b;
+  padding: 13px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.spotlightBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   7. MINIMALIST FAQ ACCORDION
+   ========================================== */
+.faqSection {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.faqHeader {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.faqTitle {
+  font-size: 24px;
+  font-weight: 850;
+  color: #09090b;
+  margin: 0 0 6px 0;
+}
+
+.faqSubtitle {
+  font-size: 14px;
+  color: #71717a;
+  margin: 0;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 18px 22px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.faqItem:hover {
+  border-color: #a1a1aa;
+}
+
+.faqQuestion {
+  font-size: 15px;
+  font-weight: 700;
+  color: #09090b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.faqAnswer {
+  font-size: 13.5px;
+  color: #52525b;
+  line-height: 1.6;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f4f4f5;
+}
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================== */
 @media (max-width: 1024px) {
-  .brandsGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .standardsGrid {
+    grid-template-columns: 1fr;
+  }
+  .partnerRow {
+    grid-template-columns: 60px 1.4fr 1.6fr 140px;
+  }
+  .partnerAudit {
+    display: none;
   }
 }
 
@@ -273,10 +808,28 @@
   .heroTitle {
     font-size: 32px;
   }
-  .brandsGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .trustMetricRow {
+    flex-wrap: wrap;
+    gap: 16px;
   }
-  .couponsGrid {
-    grid-template-columns: 1fr;
+  .partnerRow {
+    grid-template-columns: 50px 1fr;
+    gap: 14px;
+    padding: 16px;
+  }
+  .partnerBenefit {
+    grid-column: 1 / -1;
+  }
+  .claimButtonWrap {
+    grid-column: 1 / -1;
+    justify-content: stretch;
+  }
+  .claimButton {
+    width: 100%;
+    text-align: center;
+  }
+  .spotlightBanner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
