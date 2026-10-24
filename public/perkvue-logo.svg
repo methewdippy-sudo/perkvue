@@ -1,28 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" fill="none">
-  <defs>
-    <linearGradient id="pvGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#10b981" />
-      <stop offset="100%" stop-color="#047857" />
-    </linearGradient>
-    <linearGradient id="diamondGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34d399" />
-      <stop offset="100%" stop-color="#059669" />
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 44" fill="none">
+  <!-- Minimalist Geometric Monogram -->
+  <rect x="2" y="6" width="32" height="32" rx="8" fill="#09090b" />
+  <circle cx="18" cy="18" r="5" fill="#ffffff" />
+  <path d="M18 23V30" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" />
 
-  <!-- Modern Diamond Viewfinder Icon -->
-  <g transform="translate(6, 7)">
-    <rect x="0" y="0" width="36" height="36" rx="10" fill="#0f172a" />
-    <path d="M18 9L27 18L18 27L9 18Z" fill="url(#diamondGrad)" />
-    <circle cx="18" cy="18" r="4" fill="#ffffff" />
-  </g>
-
-  <!-- Typography -->
-  <text x="52" y="32" font-family="'Inter', -apple-system, sans-serif" font-size="24" font-weight="800" fill="#0f172a" letter-spacing="-0.5">
-    Perk<tspan fill="#059669">Vue</tspan>
+  <!-- High-End Editorial Wordmark -->
+  <text x="46" y="29" font-family="'Inter', -apple-system, sans-serif" font-size="21" font-weight="900" fill="#09090b" letter-spacing="-0.8">
+    PERK<tspan fill="#6366f1">VUE</tspan>
   </text>
-  <rect x="53" y="38" width="85" height="2" rx="1" fill="url(#pvGrad)" />
-  <text x="146" y="31" font-family="'Inter', -apple-system, sans-serif" font-size="8" font-weight="700" fill="#059669" letter-spacing="1.2">
-    VERIFIED
-  </text>
+  <circle cx="140" cy="24" r="2.5" fill="#6366f1" />
 </svg>

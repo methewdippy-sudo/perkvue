@@ -1,7 +1,9 @@
 import { MetadataRoute } from "next";
 import { SAFE_PERK_STORES } from "../lib/storesData";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export const dynamic = "force-static";
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://perkvue.com";
   const staticDate = new Date("2026-10-01T00:00:00Z");
 

@@ -1,7 +1,7 @@
 .modalOverlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(15, 23, 42, 0.75);
+  background-color: rgba(9, 9, 11, 0.7);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -18,13 +18,13 @@
 
 .modalCard {
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 16px;
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
   padding: 32px 28px;
   position: relative;
-  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e4e4e7;
   animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: center;
 }
@@ -36,15 +36,15 @@
 
 .closeBtn {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   border: none;
-  background: #f1f5f9;
-  color: #64748b;
-  font-size: 16px;
+  background: #f4f4f5;
+  color: #71717a;
+  font-size: 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -53,8 +53,8 @@
 }
 
 .closeBtn:hover {
-  background: #e2e8f0;
-  color: #0f172a;
+  background: #e4e4e7;
+  color: #09090b;
 }
 
 .modalHeader {
@@ -62,12 +62,12 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .brandLogo {
   height: 48px;
-  max-width: 160px;
+  max-width: 150px;
   object-fit: contain;
 }
 
@@ -75,9 +75,9 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: #0f172a;
+  background: #09090b;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,26 +87,27 @@
 .verifiedPill {
   display: inline-flex;
   align-items: center;
-  background: #ecfdf5;
-  color: #059669;
-  font-size: 12px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 11.5px;
   font-weight: 700;
   padding: 4px 12px;
   border-radius: 9999px;
-  border: 1px solid #a7f3d0;
+  border: 1px solid #e0e7ff;
 }
 
 .modalTitle {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 800;
-  color: #0f172a;
+  color: #09090b;
   margin: 0 0 8px 0;
   line-height: 1.35;
+  letter-spacing: -0.3px;
 }
 
 .modalSubtitle {
-  font-size: 14px;
-  color: #64748b;
+  font-size: 13.5px;
+  color: #71717a;
   margin: 0 0 24px 0;
   line-height: 1.5;
 }
@@ -116,10 +117,10 @@
 }
 
 .codeBox {
-  background: #f8fafc;
-  border: 2px dashed #059669;
-  border-radius: 14px;
-  padding: 14px 18px;
+  background: #f4f4f5;
+  border: 2px dashed #4f46e5;
+  border-radius: 12px;
+  padding: 12px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,45 +129,45 @@
 }
 
 .codeBox:hover {
-  background: #f0fdf4;
+  background: #eef2ff;
 }
 
 .codeText {
-  font-size: 22px;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 900;
   letter-spacing: 2px;
-  color: #047857;
+  color: #4f46e5;
   font-family: monospace;
 }
 
 .copyBtn {
-  background: #059669;
+  background: #09090b;
   color: #ffffff;
   border: none;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
-  padding: 10px 18px;
-  border-radius: 10px;
+  padding: 9px 16px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s;
 }
 
 .copyBtn:hover {
-  background: #047857;
+  background: #27272a;
 }
 
 .copiedHint {
-  font-size: 13px;
-  color: #059669;
+  font-size: 12.5px;
+  color: #4f46e5;
   font-weight: 600;
   margin-top: 10px;
   margin-bottom: 0;
 }
 
 .autoAppliedBox {
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
-  border-radius: 14px;
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
   padding: 16px;
   display: flex;
   align-items: center;
@@ -176,76 +177,76 @@
 }
 
 .autoAppliedIcon {
-  width: 36px;
-  height: 36px;
-  background: #059669;
+  width: 32px;
+  height: 32px;
+  background: #4f46e5;
   color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 16px;
   flex-shrink: 0;
 }
 
 .autoAppliedHeading {
   font-weight: 700;
-  color: #065f46;
-  font-size: 15px;
+  color: #09090b;
+  font-size: 14.5px;
 }
 
 .autoAppliedText {
-  font-size: 13px;
-  color: #047857;
+  font-size: 12.5px;
+  color: #71717a;
 }
 
 .actionsArea {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .primaryCta {
-  background: #0f172a;
+  background: #09090b;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  padding: 14px 24px;
-  border-radius: 12px;
+  padding: 13px 20px;
+  border-radius: 10px;
   text-decoration: none;
   display: block;
   transition: all 0.2s;
 }
 
 .primaryCta:hover {
-  background: #1e293b;
+  background: #27272a;
   transform: translateY(-1px);
 }
 
 .secondaryBtn {
   background: transparent;
-  color: #64748b;
+  color: #71717a;
   border: none;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  padding: 8px;
+  padding: 6px;
   cursor: pointer;
 }
 
 .secondaryBtn:hover {
-  color: #0f172a;
+  color: #09090b;
 }
 
 .trustFooter {
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid #f4f4f5;
   padding-top: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   font-size: 11px;
-  color: #94a3b8;
+  color: #a1a1aa;
   font-weight: 600;
 }

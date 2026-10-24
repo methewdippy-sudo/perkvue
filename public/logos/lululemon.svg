@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <circle cx="30" cy="30" r="18" fill="#d31334" />
+  <path d="M30 18C25 18 21 22 21 27C21 34 30 40 30 40C30 40 39 34 39 27C39 22 35 18 30 18Z" fill="#ffffff" />
+  <text x="60" y="38" font-family="'Inter', sans-serif" font-size="22" font-weight="800" fill="#222222">lululemon</text>
+</svg>

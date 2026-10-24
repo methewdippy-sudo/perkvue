@@ -4,18 +4,27 @@ import { notFound } from "next/navigation";
 import DealsClient from "./DealsClient";
 import { getStoreBySlug, IM8_STORE } from "../../../lib/storesData";
 
-export const revalidate = 86400; // Edge cached for 24h
+// Pure static generation - 0% Vercel ISR Serverless invocations
+export const dynamic = "force-static";
 
 export async function generateStaticParams() {
   return [
     { slug: "im8-health-us" },
     { slug: "im8" },
     { slug: "im8health" },
-    { slug: "ag1" },
-    { slug: "whoop" },
-    { slug: "oura-ring" },
-    { slug: "huel" },
-    { slug: "on-running" }
+    { slug: "amazon" },
+    { slug: "nike" },
+    { slug: "apple" },
+    { slug: "target" },
+    { slug: "walmart" },
+    { slug: "adidas" },
+    { slug: "samsung" },
+    { slug: "starbucks" },
+    { slug: "sephora" },
+    { slug: "lululemon" },
+    { slug: "spotify" },
+    { slug: "bestbuy" },
+    { slug: "ebay" }
   ];
 }
 
@@ -31,8 +40,8 @@ export async function generateMetadata({ params }: DealsPageProps): Promise<Meta
   const store = data ? data.store : IM8_STORE;
 
   return {
-    title: `${store.name} Promo Codes & Verified Discount Perks | PerkVue`,
-    description: `Save 20% today at ${store.name} with verified promo codes, active discount offers, and free shipping deals.`,
+    title: `${store.name} Promo Codes & Verified Vouchers | PerkVue`,
+    description: `Save 20% today at ${store.name} with verified promotional vouchers, subscriber discounts, and free shipping perks.`,
     robots: {
       index: false,
       follow: false,
